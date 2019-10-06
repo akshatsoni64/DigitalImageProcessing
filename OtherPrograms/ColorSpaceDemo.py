@@ -4,7 +4,7 @@ import os
 
 
 def main():
-    path = "/home/monster/Pictures/"
+    path = "Images/"
 
     imgpath = path + "image.jpg"
 

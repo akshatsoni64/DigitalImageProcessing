@@ -2,7 +2,7 @@ import os
 import cv2
 import matplotlib.pyplot as plt
 
-path = "/home/monster/Pictures/"
+path = "Images/"
 
 image1 = cv2.imread(path + "image.jpg", 1)  # 1 for RGB, 0 for B&W
 image1 = cv2.cvtColor(image1, cv2.COLOR_BGR2RGB)

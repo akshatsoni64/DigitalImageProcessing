@@ -1,6 +1,6 @@
 import cv2
 
-path = "/home/monster/Pictures/" #change the path of the image
+path = "Images/"
 image = cv2.imread(path + "image.jpg", 0)
 
 scale_percent = 50  # percent of original size
