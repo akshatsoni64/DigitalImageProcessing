@@ -1,13 +1,14 @@
 import cv2
 import matplotlib.pyplot as plt
+import os
 
 
 def main():
     path = "/home/monster/Pictures/"
 
-    imgpath2 = path + "image.jpg"
+    imgpath = path + "image.jpg"
 
-    img2 = cv2.imread(imgpath2, 1)
+    img2 = cv2.imread(imgpath, 1)
 
     img1 = cv2.cvtColor(img2, cv2.COLOR_BGR2RGB)
     img2 = cv2.cvtColor(img2, cv2.COLOR_BGR2LAB)
@@ -45,7 +46,11 @@ def main():
     plt.xticks([])
     plt.yticks([])
 
-    plt.imshow()
+    plt.savefig("ColorSpaceDemo.png")
+    dis = cv2.imread("ColorSpaceDemo.png")
+    cv2.imshow("Output", dis)
+    cv2.waitKey(0)
+    os.remove("ColorSpaceDemo.png")
 
 
 if __name__ == "__main__":
